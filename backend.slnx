@@ -1,3 +1,6 @@
 <Solution>
-  <Project Path="backend.csproj" />
+  <Project Path="../FinancialTransactionImporter.Tests/FinancialTransactionImporter.Tests.csproj" Id="74cf93f0-f0cb-4c6e-a0bd-04863f4fe2ef" />
+  <Project Path="FinancialTransactionImporter.Api.csproj" />
+  <Project Path="FinancialTransactionImporter.Core/FinancialTransactionImporter.Core.csproj" Id="6869b661-d2f5-4e9f-b8d2-83cb6b2202d3" />
+  <Project Path="FinancialTransactionImporter.Infrastructure/FinancialTransactionImporter.Infrastructure.csproj" Id="aca8231c-89d6-4e7e-b200-1386156235a3" />
 </Solution>
