@@ -1,4 +1,4 @@
-namespace backend
+namespace FinancialTransactionImporter.Api
 {
     public class WeatherForecast
     {

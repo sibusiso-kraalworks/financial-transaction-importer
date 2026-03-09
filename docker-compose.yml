@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend/FinancialTransactionImporter.Api
+      dockerfile: Dockerfile
+    container_name: financial-api
+    ports:
+      - "5001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:80
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/financial_transactions.db
+      - JwtSettings__Secret=YourSuperSecretKeyForJWTTokenGenerationThatIsAtLeast32CharsLong
+    volumes:
+      - sqlite-data:/app/data
+    networks:
+      - financial-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_API_URL=http://localhost:5001
+    depends_on:
+      - backend
+    networks:
+      - financial-network
+
+networks:
+  financial-network:
+    driver: bridge
+
+volumes:
+  sqlite-data:
