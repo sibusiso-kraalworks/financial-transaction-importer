@@ -10,6 +10,6 @@ namespace FinancialTransactionImporter.Core.Configurations.Csvs
     {
         public string Delimiter { get; set; } = ",";
         public string DateFormat { get; set; } = "yyyy-MM-dd HH:mm:ss";
-        public string[] ExpectedHeaders { get; set; } = { "TransactionTime", "Amount", "Description", "TransactionId" };
+        public string[] ExpectedHeaders { get; set; } 
     }
 }
