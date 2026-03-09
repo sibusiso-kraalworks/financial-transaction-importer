@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../FinancialTransactionImporter.Core/FinancialTransactionImporter.Core.csproj" />
+  <Project Path="../FinancialTransactionImporter.Infastructure/FinancialTransactionImporter.Infastructure.csproj" />
+  <Project Path="../FinancialTransactionImporter.Tests/FinancialTransactionImporter.Tests.csproj" />
+  <Project Path="FinancialTransactionImporter.Api.csproj" />
+</Solution>
